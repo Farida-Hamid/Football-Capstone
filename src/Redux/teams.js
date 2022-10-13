@@ -24,7 +24,6 @@ export const recieveLeagues = () => async (dispatch) => {
     .then((res) => res.json())
     .then((leagues) => {
       const leagList = leagues.leagues;
-      console.log(leagList);
       dispatch(read(leagList));
       return leagList;
     });
