@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { recieveLeagues } from './Redux/teams';
 import Header from './Components/Header';
 import Home from './Components/Home';
+import Info from './Components/Info';
 
 function App() {
   const leagueList = useSelector((state) => state);
@@ -21,8 +22,10 @@ function App() {
         {leagueList.length ? (
           <Routes>
             <Route path="/" element={<Home leagues={leagueList} />} />
+            <Route path="/info" element={<Info />} />
           </Routes>
         ) : ''}
+
       </main>
     </div>
   );
