@@ -1,21 +1,16 @@
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import MicIcon from '@mui/icons-material/Mic';
 import SettingsIcon from '@mui/icons-material/Settings';
 import './Style/header.css';
 
 function Header() {
-  const location = useLocation();
-  const { pathname } = location;
-  const splitLocation = pathname.split('/')[1];
-  const back = '<';
-
   return (
     <nav>
       <div className="link">
-        <NavLink to="/" className={splitLocation}>
-          {back}
-        </NavLink>
+        <Link to="/">
+          {'<'}
+        </Link>
       </div>
 
       <div className="home">

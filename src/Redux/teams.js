@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 // Action types
 const READ = 'football/teams/READ';
 
@@ -22,12 +20,13 @@ const teamsReducer = (state = [], action) => {
 };
 
 export const recieveLeagues = () => async (dispatch) => {
-  let leagues;
-  await axios.get(baseURL)
-    .then((response) => {
-      leagues = response.data.leagues;
-      dispatch(read(leagues));
+  await fetch(baseURL)
+    .then((res) => res.json())
+    .then((leagues) => {
+      const leagList = leagues.leagues;
+      console.log(leagList);
+      dispatch(read(leagList));
+      return leagList;
     });
 };
-
 export default teamsReducer;
