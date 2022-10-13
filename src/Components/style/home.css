@@ -6,9 +6,6 @@ button {
 }
 
 .teams {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 15px;
   background: #f7fa98;
 }
 
