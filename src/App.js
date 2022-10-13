@@ -5,6 +5,7 @@ import { recieveLeagues } from './Redux/teams';
 import Header from './Components/Header';
 import Home from './Components/Home';
 import Info from './Components/Info';
+import './App.css';
 
 function App() {
   const leagueList = useSelector((state) => state);

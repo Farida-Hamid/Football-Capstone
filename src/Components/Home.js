@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import Team from './Team';
+import './Style/home.css';
 
 function Home({ leagues }) {
   const leagueList = leagues;
@@ -17,7 +18,7 @@ function Home({ leagues }) {
         {leagueList.map((item) => (
           <button key={item.id} type="button" onClick={() => { chooseLeague(item.id); }}>
             <img src={item.logo} style={{ width: '50px', height: '60px' }} alt="League logo" />
-            <h6>{item.name}</h6>
+            <h5>{item.name}</h5>
             <p>{item.country}</p>
           </button>
         ))}

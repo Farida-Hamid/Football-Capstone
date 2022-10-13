@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom';
+import './Style/info.css';
 
 function Info() {
   const location = useLocation();
