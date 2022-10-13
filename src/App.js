@@ -1,10 +1,9 @@
-
-import { recieveLeagues } from './Redux/teams';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { recieveLeagues } from './Redux/teams';
 
 function App() {
-  const leagueList = useSelector(state => state);
+  const leagueList = useSelector((state) => state);
   const dispatch = useDispatch();
   console.log(leagueList);
 
