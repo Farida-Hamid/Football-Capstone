@@ -23,6 +23,7 @@ it('Testing the App component:', () => {
   expect(tree).toMatchSnapshot();
 });
 
+// Mock Redux store data
 const sudoLeague = [{
   country: 'Portugal',
   id: '140cd7fb-0598-425d-8616-8efe12f0e5f3',
