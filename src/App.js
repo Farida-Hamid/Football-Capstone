@@ -9,7 +9,7 @@ import Info from './Components/Info';
 function App() {
   const leagueList = useSelector((state) => state);
   const dispatch = useDispatch();
-  console.log(leagueList);
+  console.log('at app', leagueList);
 
   useEffect(() => async () => {
     dispatch(recieveLeagues());
@@ -25,7 +25,6 @@ function App() {
             <Route path="/info" element={<Info />} />
           </Routes>
         ) : ''}
-
       </main>
     </div>
   );

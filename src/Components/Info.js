@@ -7,7 +7,7 @@ function Info() {
   return (
     <div className="information">
       <div className="center">
-        <img src={team.logo} style={ { width: '150px' } } alt="League logo"/>
+        <img src={team.logo} style={{ width: '150px' }} alt="League logo" />
         <h2>{team.name}</h2>
       </div>
       <div className="bold">City:</div>
