@@ -1,0 +1,25 @@
+button {
+  width: 25%;
+  background: none;
+  height: 150px;
+  border: none;
+}
+
+.teams {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  background: #f7fa98;
+}
+
+.navigator {
+  padding: 15px;
+  background: #f7fa98;
+}
+
+.identifier {
+  background: #f3f567;
+  margin: 0;
+  padding-left: 30px;
+  font-weight: bold;
+}
