@@ -10,7 +10,6 @@ import './App.css';
 function App() {
   const leagueList = useSelector((state) => state);
   const dispatch = useDispatch();
-  console.log('at app', leagueList);
 
   useEffect(() => async () => {
     dispatch(recieveLeagues());

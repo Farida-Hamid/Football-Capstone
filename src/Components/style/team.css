@@ -18,5 +18,5 @@
   width: 130px;
 }
 
-.team:nth-child(even) { background: #f3f567; }
-.team:nth-child(odd) { background: #f7fa98; }
+.team:nth-child(even) {background: #f3f567}
+.team:nth-child(odd) {background: #f7fa98}
