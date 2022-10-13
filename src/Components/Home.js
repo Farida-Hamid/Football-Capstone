@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Team from './Team';
 
 function Home(leagues) {
   const leagueList = leagues.leagues;
@@ -12,7 +13,7 @@ function Home(leagues) {
     <section>
       <div className="navigator">
         {leagueList.map((item) => (
-          <button onClick={() => { chooseLeague(item.id); }}>
+          <button key="item.id" type="button" onClick={() => { chooseLeague(item.id); }}>
             <img src={item.logo} style={{ width: '50px', height: '60px' }} alt="League logo" />
             <h6>{item.name}</h6>
             <p>{item.country}</p>
@@ -20,6 +21,11 @@ function Home(leagues) {
         ))}
       </div>
       <p className="identifier">TEAMS</p>
+      <div className="teams">
+        {teamsList.map((team) => (
+          <Team key={team.id} team={team} />
+        ))}
+      </div>
     </section>
   );
 }
