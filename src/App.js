@@ -21,7 +21,7 @@ function App() {
       <main>
         {leagueList.length ? (
           <Routes>
-            <Route path="/" element={<Home leagues={leagueList} />} />
+            <Route path="/Football-Capstone" element={<Home leagues={leagueList} />} />
             <Route path="/info" element={<Info />} />
           </Routes>
         ) : ''}

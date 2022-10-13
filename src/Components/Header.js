@@ -8,7 +8,7 @@ function Header() {
   return (
     <nav>
       <div className="link">
-        <Link to="/">
+        <Link to="/Football-Capstone">
           {'<'}
         </Link>
       </div>
