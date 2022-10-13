@@ -6,7 +6,7 @@
 
 By building this application, I learned how to use React and Redux.
 
-## [Live Demo]
+## [Live Demo](https://Farida-Hamid.github.io/Football-Capstone)
 
 ## [Presentation](https://www.loom.com/share/78d25ca9625641e784a438a9b0c3b036)
 
