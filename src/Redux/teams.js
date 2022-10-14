@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-// import axios from 'axios';
 
 // Action types
 const READ = 'football/teams/READ';
@@ -31,16 +30,5 @@ export const recieveLeagues = () => async (dispatch) => {
       return leagList;
     });
 };
-// export const recieveLeagues = () => async () => {
-//   let leagues = [];
-//   await axios.get(baseURL)
-//     .then((res) => {
-//       leagues = res.data.leagues;
-//       console.log('at teams',leagues);
-//       // dispatch(read(res.data.leagues));
-//     });
-//     console.log('returning',leagues);
-//     return leagues;
-// };
 
 export default teamsReducer;
