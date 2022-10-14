@@ -16,6 +16,8 @@ By building this application, I learned how to use React and Redux.
 Open terminal and type:
 
 `npm install`
+`npm install react-router-dom --save`
+`npm install @mui/material@latest @emotion/react@latest @emotion/styled@latest --force`
 
 ### Run
 `npm start`
