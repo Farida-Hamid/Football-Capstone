@@ -1,7 +1,6 @@
 {
   "name": "leagues",
   "version": "0.1.0",
-  "homepage": "https://Farida-Hamid.github.io/Football-Capstone",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
