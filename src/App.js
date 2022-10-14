@@ -19,12 +19,10 @@ function App() {
     <div>
       <Header />
       <main>
-        {leagueList.length ? (
-          <Routes>
-            <Route path="/" element={<Home leagues={leagueList} />} />
-            <Route path="/info" element={<Info />} />
-          </Routes>
-        ) : ''}
+        <Routes>
+          <Route path="/" element={<Home leagues={leagueList} />} />
+          <Route path="/info" element={<Info />} />
+        </Routes>
       </main>
     </div>
   );
