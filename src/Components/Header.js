@@ -9,7 +9,7 @@ function Header() {
   return (
     <nav>
       <div className="link">
-        <Link to="/Football-Capstone">
+        <Link to="/">
           <ArrowBackIcon />
         </Link>
       </div>
