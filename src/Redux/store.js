@@ -1,8 +1,11 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import teamsReducer from './teams';
 
-const store = configureStore({
-  reducer: teamsReducer,
+const rootReducer = combineReducers({
+  leagues: teamsReducer,
 });
+
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;

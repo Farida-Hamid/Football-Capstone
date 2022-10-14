@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { recieveLeagues } from './Redux/teams';
 import Header from './Components/Header';
@@ -8,12 +7,16 @@ import Info from './Components/Info';
 import './App.css';
 
 function App() {
-  const leagueList = useSelector((state) => state);
+  const leagueList = useSelector((state) => state.leagues);
   const dispatch = useDispatch();
 
-  useEffect(() => async () => {
+  const loader = async () => {
     dispatch(recieveLeagues());
-  }, []);
+  };
+
+  if (leagueList.length === 0) {
+    loader();
+  }
 
   return (
     <div>
