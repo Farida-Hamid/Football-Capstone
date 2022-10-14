@@ -1,24 +1,27 @@
 import { Provider } from 'react-redux';
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers, createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { act } from 'react-dom/test-utils';
+import renderer from 'react-test-renderer';
 import App from '../App';
 import teamsReducer from '../Redux/teams';
 
-const ReactTestRenderer = require('react-test-renderer');
-
-// Mock store
-const store = configureStore({
-  reducer: teamsReducer,
+const reducer = combineReducers({
+  leagues: teamsReducer,
 });
 
+const store = createStore(
+  reducer,
+  applyMiddleware(thunk),
+);
 it('Testing the App component:', () => {
-  const tree = ReactTestRenderer.create(
-    <Router>
-      <Provider store={store}>
+  const tree = renderer.create(
+    <Provider store={store}>
+      <Router>
         <App />
-      </Provider>
-    </Router>,
+      </Router>
+    </Provider>,
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });
@@ -37,13 +40,13 @@ const MockREAD = () => ({
 
 describe('Test Redux store:', () => {
   it('Reducer returns state', () => {
-    expect(store.getState()).toEqual([]);
+    expect(store.getState()).toEqual({ leagues: [] });
   });
 
   it('Actions are dispatched', () => {
     act(() => {
       store.dispatch(MockREAD());
     });
-    expect(store.getState()).toEqual(sudoLeague);
+    expect(store.getState().leagues).toEqual(sudoLeague);
   });
 });

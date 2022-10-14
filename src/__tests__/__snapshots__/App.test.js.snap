@@ -7,7 +7,7 @@ exports[`Testing the App component: 1`] = `
       className="link"
     >
       <a
-        href="/Football-Capstone"
+        href="/"
         onClick={[Function]}
       >
         <svg
