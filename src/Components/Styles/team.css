@@ -1,0 +1,22 @@
+.name {
+  font-size: large;
+}
+
+.city {
+  font-size: medium;
+}
+
+.team {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  gap: 55px;
+}
+
+.teamInfo {
+  text-align: center;
+  width: 130px;
+}
+
+.team:nth-child(even) { background: #f3f567; }
+.team:nth-child(odd) { background: #f7fa98; }

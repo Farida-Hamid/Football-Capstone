@@ -1,0 +1,17 @@
+nav {
+  display: flex;
+  background: #f3f567;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.home {
+  display: flex;
+  color: #575756;
+}
+
+.link {
+  font-size: 26px;
+  width: 25px;
+}
