@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import Team from './Team';
-import './Style/home.css';
+import './Styles/home.css';
 
 function Home({ leagues }) {
   const leagueList = leagues;
