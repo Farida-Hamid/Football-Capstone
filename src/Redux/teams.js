@@ -1,3 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies */
+import axios from 'axios';
+
 // Action types
 const READ = 'football/teams/READ';
 
@@ -19,13 +22,21 @@ const teamsReducer = (state = [], action) => {
   }
 };
 
+// export const recieveLeagues = () => async (dispatch) => {
+//   await fetch(baseURL)
+//     .then((res) => res.json())
+//     .then((leagues) => {
+//       const leagList = leagues.leagues;
+//       dispatch(read(leagList));
+//       return leagList;
+//     });
+// };
 export const recieveLeagues = () => async (dispatch) => {
-  await fetch(baseURL)
-    .then((res) => res.json())
-    .then((leagues) => {
-      const leagList = leagues.leagues;
-      dispatch(read(leagList));
-      return leagList;
+  await axios.get(baseURL)
+    .then((res) => {
+      console.log(res.data.leagues);
+      dispatch(read(res.data.leagues));
+      return res.data.leagues;
     });
 };
 export default teamsReducer;
