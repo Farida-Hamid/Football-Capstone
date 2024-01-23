@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Leagues
+# Football Leagues
 
 >Football is a website that shows leagues and their teams. This is a cpsone project for the React and Redux Module.
 
