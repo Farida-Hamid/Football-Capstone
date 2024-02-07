@@ -44,7 +44,7 @@ Open (http://localhost:3000) to view it in your browser.
 - LinkedIn: [LinkedIn](https://linkedin.com/in/farida-hamid)
 - GitHub: [@Farida-Hamid](https://github.com/Farida-Hamid)
 
-## Acknowledgments
+## 🙏 Acknowledgments
 - Design inspired by the Creative Commons design by [Nelson Sakwa on Behance](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)).
 - API made by [Ali Jendoubi](https://github.com/ichala).
 
